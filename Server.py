@@ -7,7 +7,7 @@ bot = WhereToBBT_bot("config.cfg")
 
 def make_reply(msg):
     if msg is not None:
-        reply = "Okay"
+        reply = msg
     return reply
 
 bot.send_message("bitch", 134995750)
