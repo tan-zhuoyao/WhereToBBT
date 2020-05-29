@@ -51,10 +51,11 @@ while True:
                 reply = make_reply(message)
                 bot.send_message(reply, from_)
             elif longi is not None and lati is not None :
-                bot.send_message("Your latitude is " + str(lati), from_)
-                bot.send_message("You longitude is " + str(longi), from_)
-                print(location_list)
+                #bot.send_message("Your latitude is " + str(lati), from_)
+                #bot.send_message("You longitude is " + str(longi), from_)
                 for i in range(len(location_list)):
                     bot.send_message(str(i + 1) + ". " + location_list[i], from_)
+            else:
+                pass
 
     
