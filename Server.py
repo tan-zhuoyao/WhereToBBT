@@ -10,7 +10,6 @@ def make_reply(msg):
         reply = msg
     return reply
 
-bot.send_message("bitch", 134995750)
 
 while True:
     print("...")
@@ -26,7 +25,17 @@ while True:
             except:
                 #if error then just return default text
                 message = "I did not get you there. Sorry."
+            try:
+                #extract out longitude and latitude
+                longi = item["message"]["location"]["longitude"]
+                lati = item["message"]["location"]["latitude"]
+            except:
+                longi = 0
+                lati = 0
+            
             from_ = item["message"]["from"]["id"]
             reply = make_reply(message)
             bot.send_message(reply, from_)
+            bot.send_message("You longitude is ", from_)
+            bot.send_message("Your latitude is ", from_)
     
