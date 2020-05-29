@@ -1,10 +1,16 @@
 from WhereToBBTbot import WhereToBBT_bot
 from getDistance import * 
+import csv
+import pandas as pd
 
 update_id = None
 
 #initialises the WhereToBBT_bot class
 bot = WhereToBBT_bot("config.cfg")
+
+#read CSV file
+
+bbt_locations = pd.read_csv('BBTgeocodes.csv')
 
 def make_reply(msg):
     if msg is not None:
@@ -22,6 +28,8 @@ while True:
             message = None
             longi = None
             lati = None
+            location_list = []
+
             try:
                 #extract out the text sent to bot
                 message = item["message"]["text"]
@@ -32,6 +40,8 @@ while True:
                 #extract out longitude and latitude
                 longi = item["message"]["location"]["longitude"]
                 lati = item["message"]["location"]["latitude"]
+                location_list =  getTopKClosest(lati, longi, bbt_locations, 3)
+                print(location_list)
             except:
                 pass
 
@@ -40,8 +50,11 @@ while True:
             if message is not None:
                 reply = make_reply(message)
                 bot.send_message(reply, from_)
-            else:
-                bot.send_message("You longitude is " + str(longi), from_)
+            elif longi is not None and lati is not None :
                 bot.send_message("Your latitude is " + str(lati), from_)
+                bot.send_message("You longitude is " + str(longi), from_)
+                print(location_list)
+                for i in range(len(location_list)):
+                    bot.send_message(str(i + 1) + ". " + location_list[i], from_)
 
     
