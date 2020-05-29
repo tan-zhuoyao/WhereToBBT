@@ -10,18 +10,23 @@ def make_reply(msg):
         reply = "Okay"
     return reply
 
+bot.send_message("bitch", 134995750)
+
 while True:
     print("...")
     updates = bot.get_updates(offset=update_id)
-    updates = updates["resut"]
+    updates = updates["result"]
     if updates:
         for item in updates:
             update_id = item["update_id"]
             try:
+                #extract out the text sent to bot
                 message = item["message"]["text"]
+                print(message)
             except:
-                message = None
-            from_ = item["message"]["text"]["id"]
+                #if error then just return default text
+                message = "I did not get you there. Sorry."
+            from_ = item["message"]["from"]["id"]
             reply = make_reply(message)
             bot.send_message(reply, from_)
     
