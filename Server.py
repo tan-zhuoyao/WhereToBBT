@@ -1,4 +1,5 @@
 from WhereToBBTbot import WhereToBBT_bot
+from getDistance import * 
 
 update_id = None
 
