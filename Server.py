@@ -35,7 +35,7 @@ while True:
             
             from_ = item["message"]["from"]["id"]
             reply = make_reply(message)
-            bot.send_message(reply, from_)
-            bot.send_message("You longitude is ", from_)
-            bot.send_message("Your latitude is ", from_)
+            #bot.send_message(reply, from_)
+            bot.send_message("You longitude is " + str(longi), from_)
+            bot.send_message("Your latitude is " + str(lati), from_)
     
