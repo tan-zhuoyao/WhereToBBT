@@ -58,14 +58,31 @@ while True:
                 custom_keyboard = [[location_keyboard],[brand_keyboard]]
                 reply_markup = telegram.ReplyKeyboardMarkup(keyboard=custom_keyboard, resize_keyboard=True, one_time_keyboard=True)
                 bot.bot.send_message(chat_id=from_, text="Welcome to WhereToBBT!", reply_markup=reply_markup)
+            
             elif message == "Filter by brand!":
                 # list brands
-                koi_keyboard = telegram.KeyboardButton(text="Koi")
-                gongcha_keyboard = telegram.KeyboardButton(text="Gongcha")
-                liho_keyboard = telegram.KeyboardButton(text="Liho")
+                koi_keyboard = telegram.KeyboardButton(text="Koi", request_location=True)
+                gongcha_keyboard = telegram.KeyboardButton(text="Gong Cha", request_location=True)
+                liho_keyboard = telegram.KeyboardButton(text="LiHo", request_location=True)
                 brands_keyboard = [[koi_keyboard],[gongcha_keyboard],[liho_keyboard]]
                 reply_markup = telegram.ReplyKeyboardMarkup(keyboard=brands_keyboard, resize_keyboard=True, one_time_keyboard=True)
                 bot.bot.send_message(chat_id=from_, text="Choose your brand!", reply_markup=reply_markup)
+                
+            elif message == "Koi":
+                location_list = getTopBrand(lati, longi, bbt_locations, 3, "Koi")
+                for i in range(len(location_list)):
+                    bot.bot.sendMessage(chat_id=from_, text=str(i + 1) + ". " + location_list[i])
+            
+            elif message == "Gong Cha":
+                location_list = getTopBrand(lati, longi, bbt_locations, 3, "Gong Cha")
+                for i in range(len(location_list)):
+                    bot.bot.sendMessage(chat_id=from_, text=str(i + 1) + ". " + location_list[i])
+                
+            elif message == "LiHo":
+                location_list = getTopBrand(lati, longi, bbt_locations, 3, "LiHo")
+                for i in range(len(location_list)):
+                    bot.bot.sendMessage(chat_id=from_, text=str(i + 1) + ". " + location_list[i])
+                
             elif message is not None:
                 # prompts user to /search
                 reply = make_reply("Please enter '/start' to start search")
