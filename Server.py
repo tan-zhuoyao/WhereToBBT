@@ -2,6 +2,7 @@ from WhereToBBTbot import WhereToBBT_bot
 from getDistance import * 
 import csv
 import pandas as pd
+import telegram
 
 update_id = None
 
@@ -22,6 +23,7 @@ while True:
     print("...")
     updates = bot.get_updates(offset=update_id)
     updates = updates["result"]
+
     if updates:
         for item in updates:
             update_id = item["update_id"]
@@ -58,4 +60,7 @@ while True:
             else:
                 pass
 
-    
+    #location_keyboard = telegram.KeyboardButton(text = "Send current location", request _location = True)
+    #custom_keyboard = [[location_keyboard]]
+    #reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
+    #bot.send_message(chatid=chatid, text "Would you share your current location with me?", reply_markup = reply_markup)
