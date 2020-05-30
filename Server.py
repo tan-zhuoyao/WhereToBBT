@@ -6,10 +6,10 @@ import telegram
 
 update_id = None
 
-#initialises the WhereToBBT_bot class
+# initialises the WhereToBBT_bot class
 bot = WhereToBBT_bot("config.cfg")
 
-#read CSV file
+# read CSV file
 
 bbt_locations = pd.read_csv('BBTgeocodes.csv')
 
@@ -32,13 +32,13 @@ while True:
             location_list = []
 
             try:
-                #extract out the text sent to bot
+                # extract out the text sent to bot
                 message = item["message"]["text"]
             except:
                 pass
 
             try:
-                #extract out longitude and latitude
+                # extract out longitude and latitude
                 longi = item["message"]["location"]["longitude"]
                 lati = item["message"]["location"]["latitude"]
                 location_list =  getTopKClosest(lati, longi, bbt_locations, 3)
@@ -51,18 +51,27 @@ while True:
             except:
                 from_ = item["edited_message"]["from"]["id"]
 
-            if message is not None:
-                reply = make_reply("Please send me your location instead. To send your location, tap on the attachment button and choose 'Location'")
+            if message == "/search":
+                # trigger a button to send location
+                location_keyboard = telegram.KeyboardButton(text="Send current location", request_location=True)
+                custom_keyboard = [[location_keyboard]]
+                reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
+                reply = make_reply("Please send me your location . To send your location, tap on the attachment button and choose 'Location'")
+                bot.send_message(reply, from_)
+                bot.bot.send_message(chat_id=from_, text="Location?", reply_markup=reply_markup)
+                
+            elif message is not None:
+                reply = make_reply(message)
                 bot.send_message(reply, from_)
             elif longi is not None and lati is not None :
-                #bot.send_message("Your latitude is " + str(lati), from_)
-                #bot.send_message("You longitude is " + str(longi), from_)
+                # bot.send_message("Your latitude is " + str(lati), from_)
+                # bot.send_message("You longitude is " + str(longi), from_)
                 for i in range(len(location_list)):
                     bot.send_message(str(i + 1) + ". " + location_list[i], from_)
             else:
                 pass
 
-    #location_keyboard = telegram.KeyboardButton(text = "Send current location", request _location = True)
-    #custom_keyboard = [[location_keyboard]]
-    #reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
-    #bot.send_message(chatid=chatid, text "Would you share your current location with me?", reply_markup = reply_markup)
+    # location_keyboard = telegram.KeyboardButton(text = "Send current location", request _location = True)
+    # custom_keyboard = [[location_keyboard]]
+    # reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
+    # sbot.send_message(chatid=chatid, text "Would you share your current location with me?", reply_markup = reply_markup)
