@@ -51,27 +51,19 @@ while True:
             except:
                 from_ = item["edited_message"]["from"]["id"]
 
-            if message == "/search":
+            if message == "/start":
                 # trigger a button to send location
-                location_keyboard = telegram.KeyboardButton(text="Send current location", request_location=True)
+                location_keyboard = telegram.KeyboardButton(text="Find me BBT!🍵", request_location=True)
                 custom_keyboard = [[location_keyboard]]
-                reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
-                reply = make_reply("Please send me your location . To send your location, tap on the attachment button and choose 'Location'")
-                bot.send_message(reply, from_)
-                bot.bot.send_message(chat_id=from_, text="Location?", reply_markup=reply_markup)
-                
+                reply_markup = telegram.ReplyKeyboardMarkup(keyboard=custom_keyboard, resize_keyboard=True, one_time_keyboard=True)
+                bot.bot.send_message(chat_id=from_, text="Please send me your current location", reply_markup=reply_markup)
             elif message is not None:
-                reply = make_reply(message)
+                # prompts user to /search
+                reply = make_reply("Please enter '/start' to start search")
                 bot.send_message(reply, from_)
             elif longi is not None and lati is not None :
-                # bot.send_message("Your latitude is " + str(lati), from_)
-                # bot.send_message("You longitude is " + str(longi), from_)
                 for i in range(len(location_list)):
                     bot.send_message(str(i + 1) + ". " + location_list[i], from_)
             else:
                 pass
 
-    # location_keyboard = telegram.KeyboardButton(text = "Send current location", request _location = True)
-    # custom_keyboard = [[location_keyboard]]
-    # reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
-    # sbot.send_message(chatid=chatid, text "Would you share your current location with me?", reply_markup = reply_markup)
