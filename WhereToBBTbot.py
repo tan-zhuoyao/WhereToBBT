@@ -2,6 +2,7 @@ import requests
 import json
 import configparser as cfg
 
+
 class WhereToBBT_bot():
     def __init__(self, config):
         self.token = self.read_token(config)
