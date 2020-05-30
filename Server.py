@@ -18,7 +18,6 @@ def make_reply(msg):
         reply = msg
     return reply
 
-
 while True:
     print("...")
     updates = bot.get_updates(offset=update_id)
@@ -47,10 +46,13 @@ while True:
             except:
                 pass
 
-            from_ = item["message"]["from"]["id"]
-            
+            try:
+                from_ = item["message"]["from"]["id"]
+            except:
+                from_ = item["edited_message"]["from"]["id"]
+
             if message is not None:
-                reply = make_reply(message)
+                reply = make_reply("Please send me your location instead. To send your location, tap on the attachment button and choose 'Location'")
                 bot.send_message(reply, from_)
             elif longi is not None and lati is not None :
                 #bot.send_message("Your latitude is " + str(lati), from_)
