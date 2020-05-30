@@ -72,7 +72,7 @@ while True:
                 bot.send_message(reply, from_)
             elif longi is not None and lati is not None :
                 for i in range(len(location_list)):
-                    bot.send_message(str(i + 1) + ". " + location_list[i], from_)
+                    bot.bot.sendMessage(chat_id=from_, text=str(i + 1) + ". " + location_list[i])
             else:
                 pass
 
