@@ -54,9 +54,18 @@ while True:
             if message == "/start":
                 # trigger a button to send location
                 location_keyboard = telegram.KeyboardButton(text="Find me BBT!🍵", request_location=True)
-                custom_keyboard = [[location_keyboard]]
+                brand_keyboard = telegram.KeyboardButton(text="Filter by brand!")
+                custom_keyboard = [[location_keyboard],[brand_keyboard]]
                 reply_markup = telegram.ReplyKeyboardMarkup(keyboard=custom_keyboard, resize_keyboard=True, one_time_keyboard=True)
-                bot.bot.send_message(chat_id=from_, text="Please send me your current location", reply_markup=reply_markup)
+                bot.bot.send_message(chat_id=from_, text="Welcome to WhereToBBT!", reply_markup=reply_markup)
+            elif message == "Filter by brand!":
+                # list brands
+                koi_keyboard = telegram.KeyboardButton(text="Koi")
+                gongcha_keyboard = telegram.KeyboardButton(text="Gongcha")
+                liho_keyboard = telegram.KeyboardButton(text="Liho")
+                brands_keyboard = [[koi_keyboard],[gongcha_keyboard],[liho_keyboard]]
+                reply_markup = telegram.ReplyKeyboardMarkup(keyboard=brands_keyboard, resize_keyboard=True, one_time_keyboard=True)
+                bot.bot.send_message(chat_id=from_, text="Choose your brand!", reply_markup=reply_markup)
             elif message is not None:
                 # prompts user to /search
                 reply = make_reply("Please enter '/start' to start search")
