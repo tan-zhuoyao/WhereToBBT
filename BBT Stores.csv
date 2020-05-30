@@ -28,7 +28,7 @@ Koi,"Takashimaya
 Koi,"Jurong East MRT
 10 Jurong East Street 12, #01-09, S(609690)"
 Koi,"Raffles City
-252 North Bridge Road #B1-71,Singapore 179103, Raffles City Shopping Centre, S(179103)"
+252 North Bridge Road #B1-71, Raffles City Shopping Centre, S(179103)"
 Koi,"HarbourFront Centre
 1 Maritime Square #01-67A, Harbourfront Centre, S(099253)"
 Koi,"Tampines Mall
@@ -70,7 +70,7 @@ Koi,"Bishan MRT
 Koi,"Ang Mo Kio MRT
 2450 Ang Mo Kio Ave8 #01-05, Ang Mo Kio MRT, S(569811)"
 Koi,"Hougang Mall
-90 Hougang Ave 10, #01-15 Singapore, S(538766)"
+90 Hougang Ave 10, #01-15, S(538766)"
 Koi,"Boon Lay MRT
 301 Boon Lay way #01-34, Boon Lay MRT, S(649846)"
 Koi,"Paya Lebar MRT
@@ -95,8 +95,8 @@ Koi,"Buona Vista MRT
 100 North Buona Vista Road #1-02/03, Buona Vista MRT, S(139345)"
 Koi,"Yishun 10
 51 Yishun Central 1 #01-02, Yishun 10 Multiplex, S(768794)"
-Koi,"Westgate Mall
-3 Gateway Drive #B1-27, Westgate, S(608532)"
+Koi,"Pasir Ris MRT 
+10 Pasir Ris Central, #01-14, Pasir Ris MRT Station, S(519634)"
 Koi,"Lucky Plaza
 304 Orchard Road #01-15, Lucky Plaza, S(238863)"
 Koi,"Compass One
@@ -114,80 +114,55 @@ Koi,"Marine Parade
 Koi,"Toa Payoh
 BLK 490 Lorong 6 Toa Payoh #01-23, S(310490)"
 Gong Cha,"1 Raffles Place 
-1 Raffles Place
-#B1-39, Shopping Podium Tower 1, S(048616)"
+1 Raffles Place, #B1-39, Shopping Podium Tower 1, S(048616)"
 Gong Cha,"313 Somerset 
-313 Orchard Road
-#01-37, S(238895)"
+313 Orchard Road, #01-37, S(238895)"
 Gong Cha,"Ang Mo Kio 
-703 Ang Mo Kio Ave 3
-#01-2531, S(560703)"
+703 Ang Mo Kio Ave 3, #01-2531, S(560703)"
 Gong Cha,"Bugis Junction 
-Bugis Junction
-#03-08, The Victoria Street , S(188021)"
+Bugis Junction, #03-08, The Victoria Street , S(188021)"
 Gong Cha,"Causeway Point 
-Causeway Point 1 Woodlands Square
-#02-K10, S(738099)"
+Causeway Point 1 Woodlands Square, #02-K10, S(738099)"
 Gong Cha,"Century Square 
-2 Tampines Central 5
-#01-39, Century Square, S(529509)"
+2 Tampines Central 5, #01-39, Century Square, S(529509)"
 Gong Cha,"Changi Hospital 
-6 Simei Street 3, #01-03
-Singapore , S(529898)"
+6 Simei Street 3, #01-03, S(529898)"
 Gong Cha,"Compass One
-Compass One 1
-#02-40/41, Sengkang Square, S(545078)"
+Compass One 1, #02-40/41, Sengkang Square, S(545078)"
 Gong Cha,"Eunos MRT 
-30 Eunos Crescent
-#01-10, Eunos MRT Station, S(409423)"
+30 Eunos Crescent, #01-10, Eunos MRT Station, S(409423)"
 Gong Cha,"Funan Mall
-109 North Bridge Road
-Singapore , S(179097)"
+109 North Bridge Road, S(179097)"
 Gong Cha,"Hougang Mall 
-10 Hougang Mall, 90 Hougang Ave 10
-#B1-14/15, S(538766)"
+10 Hougang Mall, 90 Hougang Ave 10, #B1-14/15, S(538766)"
 Gong Cha,"Mapletree Business City 
-10 Pasir Panjang Road
-Singapore , S(117438)"
+10 Pasir Panjang Road, S(117438)"
 Gong Cha,"Marina Square 
-6 Raffles Boulevard
-#03-212, S(039594)"
+6 Raffles Boulevard, #03-212, S(039594)"
 Gong Cha,"Northpoint 
-930 Yishun Avenue 2
-#01-06, North Wing Of Northpoint City, S(769098)"
+930 Yishun Avenue 2, #01-06, North Wing Of Northpoint City, S(769098)"
 Gong Cha,"NUS Science Canteen Frontier 
-12 Science Drive 2
-Singapore , S(117549)"
+12 Science Drive 2,  S(117549)"
 Gong Cha,"NUS UTown 
-Fine Food @ NUS UTown,1 Create Way
-#01-04 NUS UTown , S(138602)"
+Fine Food @ NUS UTown,1 Create Way, #01-04 NUS UTown , S(138602)"
 Gong Cha,"Pasir Ris MRT 
-10 Pasir Ris Central
-#01-14, Pasir Ris MRT Station, S(519634)"
+10 Pasir Ris Central, #01-14, Pasir Ris MRT Station, S(519634)"
 Gong Cha,"Plaza Sing 
-68 Orchard Road
-#B1-K7, Plaza Singapura, S(238839)"
+68 Orchard Road, #B1-K7, Plaza Singapura, S(238839)"
 Gong Cha,"Simei MRT 
-30 Simei Street 3
-#01-04, Simei MRT Station , S(529888)"
+30 Simei Street 3, #01-04, Simei MRT Station , S(529888)"
 Gong Cha,"Singapore University of Technology & Design 
-8 Somapah Road
-#01-302, S(487372)"
+8 Somapah Road, #01-302, S(487372)"
 Gong Cha,"Singpost 
-10 Eunos Road 8
-#01-141A/141B, Singapore Post Centre, S(408600)"
+10 Eunos Road 8, #01-141A/141B, Singapore Post Centre, S(408600)"
 Gong Cha,"SMU café 2.0 
-50 Stamford Road
-#01-01, Lee Kong Chian Of Business, S(178899)"
+50 Stamford Road, #01-01, Lee Kong Chian Of Business, S(178899)"
 Gong Cha,"Takashimaya 
-391A Orchard Road
-#B2 08-7, Takashimaya Department Store, S(238873)"
+391A Orchard Road, #B2 08-7, Takashimaya Department Store, S(238873)"
 Gong Cha,"Tampines MRT 
-20 Tampines Central 1,
-S(529538)"
+20 Tampines Central 1, S(529538)"
 Gong Cha,"Tan Tock Seng Hospital 
-16 Jalan Tan Tock Seng
-#B1-03, Tan Tock Seng Hospital, S(308442)"
+16 Jalan Tan Tock Seng, #B1-03, Tan Tock Seng Hospital, S(308442)"
 Gong Cha,"Toa Payoh 
 Blk 190 Lorong 6, #01-546, S(310190)"
 Gong Cha,"Westgate 
@@ -327,7 +302,7 @@ LiHo,"18 Tai Seng
 LiHo,"Resorts World at Sentosa 
 #01-83 , 8 Sentosa Gateway, S(098269)"
 LiHo,"Sentosa Beach Station
-50 Beach View, #01-K9, Singapore S(098604)"
+50 Beach View, #01-K9, S(098604)"
 LiHo,"T4 Airport 
 10 Airport Boulevard #01-08 S(819665)"
 LiHo,"Bugis DTL
@@ -421,7 +396,7 @@ NTUC Fairprice, 587 Bukit Timah Road, #01-01, S(269707)      "
 Playmade,"NEX
  23 Serangoon Central, #04-17 NEX Shopping Mall, S(556083)"
 Playmade,"Ang Mo Kio MRT
-2450 Ang Mo Kio Ave 8, #01-04, Singapore 569811"
+2450 Ang Mo Kio Ave 8, #01-04, S(569811)"
 Playmade,"Tampines 1
 10, #01-59 Tampines Central 1, S(529536)"
 Playmade,"Paya Lebar Quarter Mall
@@ -469,7 +444,7 @@ R&B Tea,"100 AM
 R&B Tea,"United Square Mall 
 #02, 101 Thomson Rd, K1, S(307591)"
 R&B Tea,"KINEX
-#B1-30, 11 Tanjong Katong Rd, Singapore 436950"
+#B1-30, 11 Tanjong Katong Rd, S(436950)"
 R&B Tea,"Marina Bay Sands
 #B2-50, 2 Bayfront Ave, S(018972)"
 R&B Tea,"SMU School of Economics, 
