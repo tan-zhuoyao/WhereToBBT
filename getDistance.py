@@ -38,22 +38,23 @@ def getTopKClosest(ownLat, ownLon, df, k_closest):
     output = []
     for i in range(k_closest):
         output.append(output_dict[str(dist_lst[i])])
+    print(output)
     return output
 
 def getTopBrand(ownLat,ownLon, df, k_closest, brand_name):
+    df = df[df['Brand'] == brand_name]
     output_dict = {}
     dist_lst = []
     for index, row in df.iterrows():
-        brand = row['Brand']
-        if brand == brand_name:
-            lat1 = row['lat']
-            lon1 = row['lon']
-            distance = getDistance(lat1, lon1, ownLat, ownLon)
-            dist_lst.append(distance)
+        lat1 = row['lat']
+        lon1 = row['lon']
+        distance = getDistance(lat1, lon1, ownLat, ownLon)
+        dist_lst.append(distance)
         
-    output_dict[str(distance)] = row['Brand']  + ' that is ' + str("%.2f" % distance) + 'km away, at ' + row['Address']
+        output_dict[str(distance)] = row['Brand']  + ' that is ' + str("%.2f" % distance) + 'km away, at ' + row['Address']
     dist_lst.sort()
     output = []
     for i in range(k_closest):
         output.append(output_dict[str(dist_lst[i])])
+    print(output)
     return output
