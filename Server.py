@@ -75,7 +75,14 @@ while True:
                 koi_keyboard = telegram.KeyboardButton(text="Koi")
                 gongcha_keyboard = telegram.KeyboardButton(text="Gong Cha")
                 liho_keyboard = telegram.KeyboardButton(text="LiHo")
-                brands_keyboard = [[koi_keyboard],[gongcha_keyboard],[liho_keyboard]]
+                playmade_keyboard = telegram.KeyboardButton(text="Playmade")
+                heytea_keyboard = telegram.KeyboardButton(text="HeyTea")
+                tigersugar_keyboard = telegram.KeyboardButton(text="Tiger Sugar")
+                rnb_keyboard = telegram.KeyboardButton(text="R&B Tea")
+                xingfutang_keyboard = telegram.KeyboardButton(text="Xing Fu Tang")
+                partea_keyboard = telegram.KeyboardButton(text="PARTEA")
+                teatreecafe_keyboard = telegram.KeyboardButton(text="Tea Tree Cafe")
+                brands_keyboard = [[gongcha_keyboard],[koi_keyboard],[liho_keyboard],[playmade_keyboard],[rnb_keyboard],[teatreecafe_keyboard],[tigersugar_keyboard],[xingfutang_keyboard]]
                 reply_markup = telegram.ReplyKeyboardMarkup(keyboard=brands_keyboard, resize_keyboard=True, one_time_keyboard=True)
                 bot.bot.sendMessage(chat_id=from_, text="Choose your brand!", reply_markup=reply_markup)
                 
@@ -102,7 +109,63 @@ while True:
                 custom_keyboard = [[location_keyboard]]
                 reply_markup = telegram.ReplyKeyboardMarkup(keyboard=custom_keyboard, resize_keyboard=True, one_time_keyboard=True)
                 bot.bot.sendMessage(chat_id=from_, text="Send your location", reply_markup=reply_markup)
+           
+            elif message == "Playmade" and from_ in filter_list:
+                filter_list.remove(from_)
+                filter_dict[from_] = "Playmade"
+                location_keyboard = telegram.KeyboardButton(text="BBT me now!", request_location=True)
+                custom_keyboard = [[location_keyboard]]
+                reply_markup = telegram.ReplyKeyboardMarkup(keyboard=custom_keyboard, resize_keyboard=True, one_time_keyboard=True)
+                bot.bot.sendMessage(chat_id=from_, text="Send your location", reply_markup=reply_markup)
             
+            elif message == "HeyTea" and from_ in filter_list:
+                filter_list.remove(from_)
+                filter_dict[from_] = "HeyTea"
+                location_keyboard = telegram.KeyboardButton(text="BBT me now!", request_location=True)
+                custom_keyboard = [[location_keyboard]]
+                reply_markup = telegram.ReplyKeyboardMarkup(keyboard=custom_keyboard, resize_keyboard=True, one_time_keyboard=True)
+                bot.bot.sendMessage(chat_id=from_, text="Send your location", reply_markup=reply_markup)
+            
+            elif message == "Tiger Sugar" and from_ in filter_list:
+                filter_list.remove(from_)
+                filter_dict[from_] = "Tiger Sugar"
+                location_keyboard = telegram.KeyboardButton(text="BBT me now!", request_location=True)
+                custom_keyboard = [[location_keyboard]]
+                reply_markup = telegram.ReplyKeyboardMarkup(keyboard=custom_keyboard, resize_keyboard=True, one_time_keyboard=True)
+                bot.bot.sendMessage(chat_id=from_, text="Send your location", reply_markup=reply_markup)
+            
+            elif message == "R&B Tea" and from_ in filter_list:
+                filter_list.remove(from_)
+                filter_dict[from_] = "R&B Tea"
+                location_keyboard = telegram.KeyboardButton(text="BBT me now!", request_location=True)
+                custom_keyboard = [[location_keyboard]]
+                reply_markup = telegram.ReplyKeyboardMarkup(keyboard=custom_keyboard, resize_keyboard=True, one_time_keyboard=True)
+                bot.bot.sendMessage(chat_id=from_, text="Send your location", reply_markup=reply_markup)
+            
+            elif message == "Xing Fu Tang" and from_ in filter_list:
+                filter_list.remove(from_)
+                filter_dict[from_] = "Xing Fu Tang"
+                location_keyboard = telegram.KeyboardButton(text="BBT me now!", request_location=True)
+                custom_keyboard = [[location_keyboard]]
+                reply_markup = telegram.ReplyKeyboardMarkup(keyboard=custom_keyboard, resize_keyboard=True, one_time_keyboard=True)
+                bot.bot.sendMessage(chat_id=from_, text="Send your location", reply_markup=reply_markup)
+            
+            elif message == "PARTEA" and from_ in filter_list:
+                filter_list.remove(from_)
+                filter_dict[from_] = "PARTEA"
+                location_keyboard = telegram.KeyboardButton(text="BBT me now!", request_location=True)
+                custom_keyboard = [[location_keyboard]]
+                reply_markup = telegram.ReplyKeyboardMarkup(keyboard=custom_keyboard, resize_keyboard=True, one_time_keyboard=True)
+                bot.bot.sendMessage(chat_id=from_, text="Send your location", reply_markup=reply_markup)
+                
+            elif message == "Tea Tree Cafe" and from_ in filter_list:
+                filter_list.remove(from_)
+                filter_dict[from_] = "Tea Tree Cafe"
+                location_keyboard = telegram.KeyboardButton(text="BBT me now!", request_location=True)
+                custom_keyboard = [[location_keyboard]]
+                reply_markup = telegram.ReplyKeyboardMarkup(keyboard=custom_keyboard, resize_keyboard=True, one_time_keyboard=True)
+                bot.bot.sendMessage(chat_id=from_, text="Send your location", reply_markup=reply_markup)
+                
             # net to catch random messages
             elif message is not None:
                 # prompts user to /search
