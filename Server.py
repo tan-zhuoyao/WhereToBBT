@@ -20,6 +20,8 @@ def make_reply(msg):
         reply = msg
     return reply
 
+bot.send_message("no", -1001334729910)
+
 while True:
     print("...")
     updates = bot.get_updates(offset=update_id)
@@ -57,7 +59,7 @@ while True:
                 username = "unknown"
 
             print(username)
-            
+
             if from_ in filter_dict.keys() and lati is not None and longi is not None:
                 brand = filter_dict.pop(from_)
                 location_list = getTopBrand(lati, longi, bbt_locations, 3, brand)
